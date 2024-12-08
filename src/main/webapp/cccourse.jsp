@@ -52,7 +52,7 @@
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item" href="#"><i class="material-icons">edit</i> Edit Account</a>
                                 <a class="dropdown-item" href="#"><i class="material-icons">person</i> Public Profile</a>
-                                <a class="dropdown-item" href="#"><i class="material-icons">lock</i> Logout</a>
+                                <a class="dropdown-item" href="/"><i class="material-icons">lock</i> Logout</a>
                             </div>
                         </li>
                     </div>

@@ -225,7 +225,7 @@ if(admin==null)
                                             <i class="material-icons">person</i> Public Profile
                                         </a>
                                         <a class="dropdown-item"
-                                           href="guest-login.html">
+                                           href="/">
                                             <i class="material-icons">lock</i> Logout
                                         </a>
                                     </div>

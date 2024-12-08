@@ -85,7 +85,7 @@
                                 <a class="dropdown-item" href="#">
                                     <i class="material-icons">person</i> Public Profile
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/">
                                     <i class="material-icons">lock</i> Logout
                                 </a>
                             </div>
