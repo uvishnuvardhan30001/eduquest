@@ -1,0 +1,427 @@
+@charset "UTF-8";
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(/EduQuestFrontEnd/images/Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    color: #333;
+}
+.navbar-logo {
+    height: 50px; /* Increase the height of the logo */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Ensure navbar height remains the same */
+.navbar-dark {
+    padding: 10px 0; /* Ensure consistent navbar padding */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Center logo vertically */
+    height: 100%; /* Keep navbar height unaffected */
+}
+
+/* Top Navbar */
+.navbar-dark {
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000; /* Keep navbar on top of other content */
+   	background: linear-gradient(145deg, #2c2c2c, #1b1b1b);
+    padding: 10px 0;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ddd;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 8px;
+    margin: 0 5px;
+}
+
+.navbar-dark .navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(6px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::before {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+    background-color: #505050;
+    box-shadow: 0 6px 10px rgb(255, 255, 255);
+    
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Center logo vertically */
+    height: 100%; /* Keep navbar height unaffected */
+}
+
+.side-navbar {
+    width: 250px;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #2c2c2c, #1b1b1b);
+    padding-top: 20px;
+    color: #eee;
+    position: fixed; /* Fix the sidebar to the left */
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.side-navbar .nav-link {
+    color: #ddd;
+    font-size: 18px;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.side-navbar .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.side-navbar .nav-link:hover::before {
+    transform: translateY(0);
+    opacity: 1;
+}
+.nav-link.dropdown-toggle[aria-expanded="true"] {
+    background-color: #495057;
+}
+.side-navbar .nav-link:hover {
+    background-color: #404040;
+    color: #fff;
+    box-shadow: 0 8px 15px rgb(255, 255, 255);
+    
+}
+
+.side-navbar .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    background: none;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+/* General Styles for Course Cards */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between cards */
+}
+
+.card-img-top {
+    height: 200px; /* Adjust height for the image */
+    object-fit: cover; /* Ensure the image fits well */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 15px; /* Reduce padding for a more compact look */
+}
+
+.card-title {
+    color: #003366;
+    font-weight: bold;
+    font-size: 18px; /* Reduce the font size */
+}
+
+.card-text {
+    color: #555;
+    font-size: 14px; /* Reduce font size */
+}
+
+/* Flexbox Layout for Course Cards */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col {
+    flex: 1 1 32%; /* Force the cards to be 32% of the row width, leaving space between them */
+    max-width: 32%; /* Ensures cards do not stretch beyond 32% */
+    margin-bottom: 20px; /* Add space between rows */
+}
+
+@media (max-width: 768px) {
+    .col {
+        flex: 1 1 48%; /* 2 cards per row on medium screens */
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .col {
+        flex: 1 1 100%; /* Stack the cards vertically for smaller screens */
+        max-width: 100%;
+    }
+}
+
+
+/* Main Dashboard Content */
+/* Main Dashboard Content */
+/* Main Dashboard Content */
+.content {
+    margin-left: 250px; /* Add space for the sidebar */
+    margin-top: 70px; /* Add space for the fixed navbar */
+    padding: 20px;
+    background: none;
+    border-radius: 10px;
+    flex-grow: 1;
+    height: calc(100vh - 70px); /* Subtract navbar height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+/* Dashboard Box */
+.dashboard-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 22%; /* Allows four boxes to fit in one row */
+    min-width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-box:hover {
+    transform: translateY(-10px);
+}
+
+.dashboard-box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.dashboard-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Circular Progress Ring */
+.progress-ring {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+}
+
+.progress-ring svg {
+    transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+    fill: none;
+    stroke-width: 8;
+    r: 50;
+    cx: 60;
+    cy: 60;
+}
+
+.progress-ring .bg {
+    stroke: #eee;
+}
+
+.progress-ring .progress {
+    stroke: #4CAF50;
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+}
+
+/* Percentage Text */
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+/* About Section Styles */
+.sections-container {
+    display: flex; /* Use flexbox to align sections side by side */
+    justify-content: space-around; /* Distribute space evenly */
+    padding: 20px; /* Add padding around the sections */
+}
+
+.about-section, .mission-section, .vision-section {
+    padding: 40px 20px;
+    background-color: rgba(176, 143, 143, 0.7);
+    border-radius: 10px;
+    max-width: 300px; /* Adjust max-width for better side-by-side alignment */
+    box-shadow: 0 4px 10px rgba(0, 234, 255, 0.7);
+    margin: 10px; /* Add margin to space sections apart */
+    flex: 1; /* Allow sections to grow equally */
+}
+
+.about-section h1, .mission-section h2, .vision-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-section p, .mission-section p, .vision-section p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sections-container {
+        flex-direction: column; /* Stack sections on small screens */
+        align-items: center; /* Center sections */
+    }
+
+    .about-section, .mission-section, .vision-section {
+        max-width: 90%; /* Adjust width for small screens */
+    }
+}
+
+/* Hover Effects */
+.about-section:hover, .mission-section:hover, .vision-section:hover {
+    background-color: rgba(200, 160, 160, 0.9); /* Lighten background */
+    box-shadow: 0 6px 15px rgba(0, 234, 255, 1); /* Intensify shadow */
+    transform: translateY(-5px); /* Slightly lift the section */
+}
+
+.about-section:hover h1, .mission-section:hover h2, .vision-section:hover h2 {
+    color: #111; /* Darken the heading color */
+}
+
+.about-section:hover p, .mission-section:hover p, .vision-section:hover p {
+    color: #333; /* Darken the paragraph color */
+}
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Centering Section */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px); /* Adjust height considering navbar */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Optional background for better visibility */
+    border-radius: 10px;
+}
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    max-width: 500px; /* Set a max-width for the form */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+/* Form Inputs */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Form Buttons */
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+.dropdown-menu
+{
+	background-color: #ccc;
+	border-radius:20px;
+}
+.dropdown-menu,.dropdown-item 
+{
+	background-color: #ccc;
+	border-radius:20px;
+}
