@@ -318,7 +318,7 @@ if(admin==null)
 
                     </div>
 
-                          <div class="mdk-drawer js-mdk-drawer"
+                       <div class="mdk-drawer js-mdk-drawer"
                          id="default-drawer">
                         <div class="mdk-drawer__content ">
                             <div class="sidebar sidebar-left sidebar-dark bg-dark o-hidden"
@@ -443,6 +443,7 @@ if(admin==null)
                     </div>
 
                 </div>
+
 
                 <!-- App Settings FAB -->
                 <div id="app-settings">

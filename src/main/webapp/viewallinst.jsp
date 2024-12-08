@@ -442,7 +442,6 @@ if(admin==null)
 
                 </div>
 
-
                 <!-- App Settings FAB -->
                 <div id="app-settings">
                     <app-settings layout-active="default"
