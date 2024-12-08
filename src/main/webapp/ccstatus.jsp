@@ -290,44 +290,132 @@ if(admin==null)
 
                     </div>
 
-                    <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+                    <div class="mdk-drawer js-mdk-drawer"
+                         id="default-drawer">
                         <div class="mdk-drawer__content ">
-                            <div class="sidebar sidebar-left sidebar-dark bg-dark o-hidden" data-perfect-scrollbar>
+                            <div class="sidebar sidebar-left sidebar-dark bg-dark o-hidden"
+                                 data-perfect-scrollbar>
                                 <div class="sidebar-p-y">
                                     <div class="sidebar-heading">Main</div>
                                     <ul class="sidebar-menu sm-active-button-bg">
                                         <li class="sidebar-menu-item active">
-                                            <a class="sidebar-menu-button" href="studenthome">
-                                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dashboard</i>
-                                                Dashboard
+                                            <a class="sidebar-menu-button"
+                                               href="adminhome">
+                                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_box</i> Dashboard
                                             </a>
                                         </li>
-                                        <li class="sidebar-menu-item">
-                                            <a class="sidebar-menu-button" href="#">
-                                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">view_list</i>
-                                                 Courses
-                                            </a>
-                                        </li>
-                                        <li class="sidebar-menu-item">
-                                            <a class="sidebar-menu-button" href="#">
-                                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">book</i>
-                                               Students
-                                            </a>
-                                        </li>
-                                        <li class="sidebar-menu-item">
-                                            <a class="sidebar-menu-button" href="#">
-                                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">assignment</i>
-                                                Assignments
+                                        <li class="sidebar-menu-item active">
+                                            <a class="sidebar-menu-button"
+                                               href="viewallstd">
+                                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_box</i> Student
                                             </a>
                                         </li>
                                     </ul>
-    
+                                    <!-- Account menu -->
+                                    <div class="sidebar-heading">Operations</div>
+                                    <ul class="sidebar-menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button sidebar-js-collapse"
+                                               data-toggle="collapse"
+                                               href="#account_menu">
+                                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person_outline</i>
+                                                Instructor
+                                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <ul class="sidebar-submenu sm-indent collapse"
+                                                id="account_menu">
+                                                <li class="sidebar-menu-item">
+                                                    <a class="sidebar-menu-button"
+                                                       href="viewallinst">
+                                                        <span class="sidebar-menu-text">View Instructors</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar-menu-item">
+                                                    <a class="sidebar-menu-button"
+                                                       href="instructorstatus">
+                                                        <span class="sidebar-menu-text">Approve Instructors</span>
+                                                    </a>
+                                                </li>
+                                               
+                                            </ul>
+                                            <ul class="sidebar-menu">
+                                                <li class="sidebar-menu-item">
+                                                    <a class="sidebar-menu-button sidebar-js-collapse"
+                                                       data-toggle="collapse"
+                                                       href="#account_menu">
+                                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person_outline</i>
+                                                        Content Creator
+                                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                                    </a>
+                                                    <ul class="sidebar-submenu sm-indent collapse"
+                                                        id="account_menu">
+                                                        <li class="sidebar-menu-item">
+                                                            <a class="sidebar-menu-button"
+                                                               href="viewallcc">
+                                                                <span class="sidebar-menu-text">view CC</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="sidebar-menu-item">
+                                                            <a class="sidebar-menu-button"
+                                                               href="ccstatus">
+                                                                <span class="sidebar-menu-text">Approve CC</span>
+                                                            </a>
+                                                        </li>
+                                                       
+                                                    </ul>
+                                                    <ul class="sidebar-menu">
+                                                        <li class="sidebar-menu-item">
+                                                            <a class="sidebar-menu-button sidebar-js-collapse"
+                                                               data-toggle="collapse"
+                                                               href="#account_menu">
+                                                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person_outline</i>
+                                                                Course
+                                                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                                            </a>
+                                                            <ul class="sidebar-submenu sm-indent collapse"
+                                                                id="account_menu">
+                                                                <li class="sidebar-menu-item">
+                                                                    <a class="sidebar-menu-button"
+                                                                       href="#">
+                                                                        <span class="sidebar-menu-text">View all</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sidebar-menu-item">
+                                                                    <a class="sidebar-menu-button"
+                                                                       href="#">
+                                                                        <span class="sidebar-menu-text">Update</span>
+                                                                    </a>
+                                                                </li>
+                                                               
+                                                            </ul>
+                                                            <ul class="sidebar-menu">
+                                                                <li class="sidebar-menu-item">
+                                                                    <a class="sidebar-menu-button sidebar-js-collapse"
+                                                                       data-toggle="collapse"
+                                                                       href="#account_menu">
+                                                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person_outline</i>
+                                                                        Assignments
+                                                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                                                    </a>
+                                                                    <ul class="sidebar-submenu sm-indent collapse"
+                                                                        id="account_menu">
+                                                                        <li class="sidebar-menu-item">
+                                                                            <a class="sidebar-menu-button"
+                                                                               href="#">
+                                                                                <span class="sidebar-menu-text">View</span>
+                                                                            </a>
+                                                                        </li>
+                                                                       
+                                                                    </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
+
                 <!-- App Settings FAB -->
                 <div id="app-settings">
                     <app-settings layout-active="default"
